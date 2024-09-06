@@ -9,7 +9,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #49a8bb;
     line-height: 1.6;
 }
 
@@ -110,7 +110,7 @@ main {
 
 /* Contact Section */
 .contact {
-    background-color: #ffffff;
+    background-color: #99d0f7;
     padding: 60px 0;
     text-align: center;
 }
