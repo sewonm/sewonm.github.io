@@ -9,7 +9,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     color: #333;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
 }
 
 .container {
@@ -21,14 +21,19 @@ body {
 /* Header Styles */
 header {
     background-color: #ffffff;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #e0e0e0;
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
+}
+
+header p {
+    font-size: 1.125rem;
+    color: #666;
 }
 
 /* Main Section Styles */
@@ -36,54 +41,112 @@ main {
     padding: 40px 0;
 }
 
-.hero {
+/* Intro Section */
+.intro {
     background-color: #ffffff;
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: center;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
+.intro h2 {
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.hero p {
+.intro p {
     font-size: 1.125rem;
     color: #666;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Gallery Styles */
-.gallery {
+/* Projects Section */
+.projects {
     background-color: #ffffff;
     padding: 40px 0;
 }
 
-.gallery-item {
-    display: inline-block;
-    width: 30%;
-    margin: 1.5%;
-    vertical-align: top;
+.projects h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-info {
     text-align: center;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.gallery-item p {
-    margin-top: 10px;
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact ul {
+    list-style-type: none;
+}
+
+.contact ul li {
     font-size: 1rem;
     color: #333;
+    margin-bottom: 10px;
+}
+
+.contact ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Footer Styles */
 footer {
     background-color: #ffffff;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid #e0e0e0;
     padding: 20px 0;
     text-align: center;
 }
