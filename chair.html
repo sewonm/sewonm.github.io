@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script>
+      AFRAME.registerComponent('checker-material', {
+        init: function () {
+          var canvas = document.createElement('canvas');
+          canvas.width = 100;
+          canvas.height = 100;
+          var ctx = canvas.getContext('2d');
+          
+          // Draw the checkered pattern
+          ctx.fillStyle = '#D98B8B';
+          ctx.fillRect(0, 0, 50, 50);
+          ctx.fillRect(50, 50, 50, 50);
+          ctx.fillStyle = '#A52A2A';
+          ctx.fillRect(50, 0, 50, 50);
+          ctx.fillRect(0, 50, 50, 50);
+          
+          // Create a texture from the canvas
+          var texture = new THREE.CanvasTexture(canvas);
+          texture.wrapS = THREE.RepeatWrapping;
+          texture.wrapT = THREE.RepeatWrapping;
+          
+          // Apply the texture to the entity
+          this.el.setAttribute('material', {src: texture, repeat: this.el.getAttribute('material').repeat});
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <a-scene background="color: #f0f0f0">
+      <a-assets>
+        <!--<img id = "grass" src = "grass1-albedo3.png">
+        <img id = "normal" src = "grass1-normal1-dx.png">
+        <img id = "sky" src = "AdobeStock_344599358.jpeg"> -->
+        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+
+
+        <img id="skyTexture"
+        src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+        
+      </a-assets>
+
+     <!--<a-sky material = "color: #ffffff; src: #sky; position: 200 100;" >
+
+      </a-sky>-->
+
+      <a-sky src="#skyTexture"></a-sky>
+     
+      <a-sphere position="0 1 -5" radius="0.5" color="#ffffff"></a-sphere>
+    
+      <!-- Iris (colored part) -->
+      <a-sphere position="0 1.1 -4.5" radius="0.25" color="#4682B4" material="opacity: 0.9"></a-sphere>
+      
+      <!-- Pupil (black part) -->
+      <a-sphere position="0 1.2 -4" radius="0.1" color="#000000"></a-sphere>
+      
+      
+      
+      <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+
+        
+      <!-- Chair components with checkered texture -->
+      <a-box position="0 0.45 0" width="0.5" depth="0.5" height="0.05" checker-material material="repeat: 2 2"></a-box>
+      
+      <a-box position="0.22 0.225 0.22" width="0.05" depth="0.05" height="0.45" checker-material material="repeat: 0.2 1.8"></a-box>
+      <a-box position="-0.22 0.225 0.22" width="0.05" depth="0.05" height="0.45" checker-material material="repeat: 0.2 1.8"></a-box>
+      <a-box position="0.22 0.225 -0.22" width="0.05" depth="0.05" height="0.45" checker-material material="repeat: 0.2 1.8"></a-box>
+      <a-box position="-0.22 0.225 -0.22" width="0.05" depth="0.05" height="0.45" checker-material material="repeat: 0.2 1.8"></a-box>
+      
+      <a-box position="0.22 0.75 -0.22" width="0.05" depth="0.05" height="0.65" checker-material material="repeat: 0.2 2.6"></a-box>
+      <a-box position="-0.22 0.75 -0.22" width="0.05" depth="0.05" height="0.65" checker-material material="repeat: 0.2 2.6"></a-box>
+      
+      <a-box position="0 1.05 -0.22" width="0.49" depth="0.05" height="0.05" checker-material material="repeat: 2 0.2"></a-box>
+      
+      <a-box position="0.11 0.75 -0.22" width="0.02" depth="0.02" height="0.55" checker-material material="repeat: 0.08 2.2"></a-box>
+      <a-box position="-0.11 0.75 -0.22" width="0.02" depth="0.02" height="0.55" checker-material material="repeat: 0.08 2.2"></a-box>
+      <a-box position="0 0.75 -0.22" width="0.02" depth="0.02" height="0.55" checker-material material="repeat: 0.08 2.2"></a-box>
+      
+      <!-- Lighting -->
+      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+      <a-light type="directional" color="#ffffff" intensity="0.3" position="-4 2 5"></a-light>
+      
+      <!-- Camera --> 
+     
+     
+      <a-camera position="2 1 -3" rotation="-15 0 0"></a-camera>
+     
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+      <!--<a-plane material = "color: #FFFFFF; src: #grass; repeat: 5000 5000; normal-map: #normal; normal-texture-repeat: 5000 5000" rotation = "-90 0 0" scale = "10000 10000 1" >-->
+      
+    </a-plane>
+    </a-scene>
+  </body>
+</html>
