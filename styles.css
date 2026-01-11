@@ -1,37 +1,26 @@
-:root {
-    --font-body: -apple-system, sans-serif;
-    --font-size: 16px;
-    --line-height: 1.5;
-    --max-width: 800px;
-}
-
-[data-theme="light"] {
-    --bg-color: #fff;
-    --text-color: #0d0d0d;
-    --accent-color: #0b6b62;
-}
-
-[data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #eee;
-    --accent-color: #c2c2c2;
-}
-
 body {
-    font-family: var(--font-body);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    background: var(--bg-color);
-    color: var(--text-color);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem;
+    background-color: #ededed; 
 }
 
-.tab-content {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+    color: #00DFFF;
+}
+
+.page{
     display: none;
 }
 
-.tab-content.active {
-    display: block;
+.page.active{
+    display: block; 
 }
+
+/* id selector is with # 
+   class selector is with . 
+*/
+

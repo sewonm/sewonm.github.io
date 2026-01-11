@@ -1,44 +1,20 @@
-// Theme toggle
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
+const links = document.querySelectorAll(".nav-link");
+const pages = document.querySelectorAll(".page");
 
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
+links.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
+    const target = link.dataset.target;
 
-// Tab navigation
-const tabs = document.querySelectorAll('[data-tab]');
-const tabContents = document.querySelectorAll('.tab-content');
+    // hide all pages
+    pages.forEach(page => page.classList.remove("active"));
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const targetTab = tab.dataset.tab;
-        
-        // Update active states
-        tabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
-        
-        tab.classList.add('active');
-        document.getElementById(targetTab).classList.add('active');
-        
-        // Update URL hash
-        history.replaceState(null, '', `#${targetTab}`);
-        localStorage.setItem('activeTab', targetTab);
-    });
-});
+    // remove active state from links
+    links.forEach(l => l.classList.remove("active"));
 
-// Load saved tab or from URL hash
-window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.slice(1);
-    const savedTab = localStorage.getItem('activeTab');
-    const targetTab = hash || savedTab || 'home';
-    
-    document.querySelector(`[data-tab="${targetTab}"]`)?.click();
+    // show selected page
+    document.getElementById(target).classList.add("active");
+    link.classList.add("active");
+  });
 });

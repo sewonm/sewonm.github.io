@@ -4,6 +4,8 @@
   <meta charset = "utf-8">
   <meta name="viewport" content="width=device-width">
   <title>sewon</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer> </script>
 </head>
 <body>
 
@@ -14,13 +16,14 @@
       <p class ="heading">
         Sewon Myung
         <br>
-        GT Mathematics 
-        <br>
-        smyung6 at gt dot edu
+        smyung6 [at] gt [dot] edu
       </p>
       <nav>
-        <ul>
-          <li>Home</li>
+        <ul class ="nav-bar">
+          <li><a id="home-link" href="#home">home</a></li>
+          <li><a id="blog-link" href="#blog">blog</a></li>
+          <li>projects</li>
+          <!-- <li>artworks</li> -->
         </ul>
       </nav>
       
@@ -30,9 +33,21 @@
   </div>
 
   <section>
-      <h1>Hi, my name is Sewon Myung.</h1>
-      <p>I am interested in mathematics.</p>
-      <p>I like to <a href="">paint.</a></p>
+      <div class="sections">
+        <div id="home">
+          <p>I am currently an undergraduate student at Georgia Tech majoring in mathematics. </p>
+
+          <p>My research interests lie in combinatorics, low-dimensional topology, and AI/ML.</p>
+
+          <p>Outside of mathematics, I am interested in art and design.</p>
+        </div>
+
+        <div id="blog">
+          <p>this is my blog</p>
+        </div>
+
+      </div>
+
 
   </section>
 
