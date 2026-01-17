@@ -14,6 +14,8 @@ ul {
 
 .heading {
     color: gray;
+    margin-top: 100px;
+    margin-left: 50px; 
 }
 
 
@@ -31,13 +33,16 @@ ul {
 .nav-bar {
   list-style: none;
   padding: 0;
-  margin: 0;
-  font-size: 1
+  
+  font-size: 1;
+  margin-left: 50px;
+  
+  
 }
 
 .sections {
-    margin-top: -20px;
-    margin-left: 100px;
+    margin-top: -90px;
+    margin-left: 300px;
     color:gray;
       padding-top: 2px;
 }
@@ -54,6 +59,10 @@ ul {
 }
 
 :visited {
+    text-decoration: none;
+}
+
+:active {
     text-decoration: none;
 }
 
