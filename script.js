@@ -1,20 +1,35 @@
-const links = document.querySelectorAll(".nav-link");
-const pages = document.querySelectorAll(".page");
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav-bar a");
+  const navItems = document.querySelectorAll(".nav-bar li");
+  const sections = document.querySelectorAll(".sections > div");
 
-links.forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
+  // default state
+  document.getElementById("home").classList.add("active");
+  const defaultLink = document.querySelector('.nav-bar a[href="#home"]');
+  defaultLink.classList.add("active");
+  defaultLink.parentElement.classList.add("active");
 
-    const target = link.dataset.target;
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-    // hide all pages
-    pages.forEach(page => page.classList.remove("active"));
+      const targetId = link.getAttribute("href").substring(1);
 
-    // remove active state from links
-    links.forEach(l => l.classList.remove("active"));
+      // remove active from all sections
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
 
-    // show selected page
-    document.getElementById(target).classList.add("active");
-    link.classList.add("active");
+      // remove active from all nav items + links
+      links.forEach(l => l.classList.remove("active"));
+      navItems.forEach(item => item.classList.remove("active"));
+
+      // activate selected section
+      document.getElementById(targetId).classList.add("active");
+
+      // activate selected nav link + its <li>
+      link.classList.add("active");
+      link.parentElement.classList.add("active");
+    });
   });
 });

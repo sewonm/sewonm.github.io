@@ -1,5 +1,9 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    background-color: #ededed; 
+    background-color: #FFFF; 
 }
 
 ul {
@@ -9,16 +13,64 @@ ul {
 }
 
 .heading {
-    color: #00DFFF;
+    color: gray;
 }
 
-.page{
-    display: none;
+
+.page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  column-gap: 60px;
+
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 24px;
 }
 
-.page.active{
-    display: block; 
+
+.nav-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1
 }
+
+.sections {
+    margin-top: -20px;
+    margin-left: 100px;
+    color:gray;
+      padding-top: 2px;
+}
+
+.sections p {
+  margin-top: 0;
+  margin-bottom: 1.4em;
+  max-width: 600px;
+}
+
+:link {
+    text-decoration: none;
+    color:gray;
+}
+
+:visited {
+    text-decoration: none;
+}
+
+
+.sections > div {
+  display: none;
+}
+
+.sections > div.active {
+  display: block;
+}
+
+.nav-bar li.active a {
+  color: #00DFFF
+}
+
+
 
 /* id selector is with # 
    class selector is with . 
