@@ -9,9 +9,7 @@
 </head>
 <body>
 
-
-
-  <div class ="text-div">
+  <div class="page">
     <div class="header-wrapper">
       <p class ="heading">
         Sewon Myung
@@ -22,54 +20,108 @@
         <ul class ="nav-bar">
           <li><a id="home-link" href="#home">home</a></li>
            <li><a id="projects-link" href="#projects">projects</a></li>
-          <!-- <li><a id="blog-link" href="#blog">blog</a></li> -->
+          <li><a id="blog-link" href="#blog">blog</a></li>
           <li><a id="gallery-link" href="#gallery">gallery</a></li>
           <!-- <li>artworks</li> -->
         </ul>
       </nav>
-      
-    
     </div>
 
-  </div>
-
-  <section>
-      <div class="sections">
+    <div class="sections">
         <div id="home">
           <p>I am currently an undergraduate student at Georgia Tech studying mathematics. </p>
  
-          <p>My research interests lie in geometry, combinatroics, and their applications in AI/ML.</p>
+          <p>My research interests lie in geometry, combinatorics, and their applications in computation.</p>
 
           <p>Outside of mathematics, I am interested in art and design.</p>
           <p>Contact: smyung6 [at] gt [dot] edu</p>
         </div>
 
-        <!-- <div id="blog">
-          <p>this is my blog</p>
-        </div> -->
+        <div id="blog">
+
+          <details class="dropdown">
+            <summary>
+              Conway Knot is Not a Slice
+              <span class="arrow"></span>
+            </summary>
+            <p>
+              A reading project based on Lisa Piccirillo’s proof.
+              Focused on knot concordance and slice obstructions.
+            </p>
+          </details>
+
+  
+
+        </div>
         <div id="projects">
-          <p>study of "Conway Knot is Not Slice" (Piccirillo, 2020)</p>
-          <p>easel: AI Art teacher</p>
-          <p>datalens</p>
-          <p>algorithmic art</p>
-          <p>for more, check out my github.</p>
+
+          <details class="dropdown">
+            <summary>
+              geometric generative modeling on manifolds
+              <span class="arrow"></span>
+            </summary>
+            <p>
+              Exploring generative models defined on smooth manifolds.
+              Interested in geometry-aware diffusion models and higher-order structures.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary>
+              easel: AI Art teacher
+              <span class="arrow"></span>
+            </summary>
+            <p>
+              An AI-powered art education tool that critiques sketches,
+              helps with perspective, and builds structured learning paths.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary>
+              algorithmic art
+              <span class="arrow"></span>
+            </summary>
+            <p>
+              Generative systems inspired by geometry, topology, and architectural minimalism.
+            </p>
+          </details>
+
+          <p>
+            For more, check out my 
+            <a href="https://github.com/sewonm" class="text-link">github</a>.
+          </p>
+
         </div>
-        <div id="gallery">
-          <p>My primary medium is oil paint, but I also do digital and algorithmic art. </p>
-          
-          <p>I will only post my algorithmic art here. </p>
 
-          <p>The first few images are created using Generativeme's techniques.</p>
 
-          <p>My inspirations: SANAA</p>
+
+      <div id="gallery">
+        <p>My primary medium is oil paint, but I also do digital and algorithmic art.</p>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="images/delta.png" alt="Oil painting 1">
+            <figcaption>Oil on canvas, 8×8</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/painting2.jpg" alt="Oil painting 2">
+            <figcaption>Oil on canvas, 12×12</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/gen1.png" alt="Generative piece">
+            <figcaption>Generative study</figcaption>
+          </figure>
         </div>
-
-
-
       </div>
 
 
-  </section>
+
+
+    </div>
+  </div>
 
 </body>
 </html>

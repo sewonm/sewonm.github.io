@@ -14,45 +14,44 @@ ul {
   padding: 0;
 }
 
+
+
 .heading {
     color: gray;
-    margin-top: 100px;
-    margin-left: 50px; 
+    margin: 0 0 20px 0;
+    font-size: medium;
 }
 
 
 .page {
   display: grid;
   grid-template-columns: 240px 1fr;
-  column-gap: 60px;
+  column-gap: 30px;
+  align-items: start;
 
   max-width: 1000px;
-  margin: 80px auto;
-  padding: 0 24px;
+  margin: 100px 50px;
+  padding: 0;
 }
 
 
 .nav-bar {
   list-style: none;
+  
   padding: 0;
-  
+  margin: 0;
   font-size: 1;
-  margin-left: 50px;
-  
-  
 }
 
 .sections {
-    margin-top: -90px;
-    margin-left: 300px;
-    color:gray;
-      padding-top: 2px;
+    color: gray;
 }
 
 .sections p {
   margin-top: 0;
   margin-bottom: 1.4em;
   max-width: 600px;
+      font-size: medium;
 }
 
 :link {
@@ -60,12 +59,59 @@ ul {
     color:gray;
 }
 
-:visited {
-    text-decoration: none;
+
+
+a:visited {
+  color: gray;
 }
+
+
+
+.nav-bar a {
+  color: gray;
+  transition: color 0.2s ease;
+}
+
+.nav-bar a:hover {
+  color: #1a1a1a;  /* darker gray */
+}
+
 
 :active {
     text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #00DFFF;
+  transform: translateX(3px);
+}
+
+.text-link {
+  position: relative;
+  color: gray;
+  text-decoration: underline;
+
+}
+
+/* .text-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: #00DFFF;
+  transition: width 0.3s ease;
+} */
+
+.text-link:hover {
+  color: #00DFFF;
 }
 
 
@@ -81,6 +127,70 @@ ul {
   color: #00DFFF
 }
 
+
+
+.dropdown {
+  margin-bottom: 1.2em;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  color: gray;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "▸";
+  margin-left: 6px;
+}
+
+details[open] summary::after {
+  content: "▾";
+}
+
+details p {
+  margin-top: 0.6em;
+  padding-left: 18px;
+}
+
+
+
+
+details p {
+  margin-top: 0.6em;
+  padding-left: 18px;
+}
+
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 700px;
+  margin-top: 18px;
+}
+
+.gallery-item {
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item figcaption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: gray;
+}
 
 
 /* id selector is with # 
