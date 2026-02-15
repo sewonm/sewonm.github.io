@@ -192,6 +192,23 @@ details p {
   color: gray;
 }
 
+#projects .project-category:first-of-type {
+  margin-top: 0;
+}
+
+
+.project-category {
+  font-size: 0.85em;
+
+  color: gray;
+
+  margin: 50px 0 18px 0;   /* more vertical spacing */
+  /* padding-bottom: 10px; */
+
+}
+
+
+
 
 /* id selector is with # 
    class selector is with . 
