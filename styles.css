@@ -208,6 +208,22 @@ details p {
 }
 
 
+.dropdown summary {
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.dropdown p {
+  margin-top: 0;
+}
+
+.project-status {
+  font-size: medium;
+  color: gray;
+}
+
+
+
 
 
 /* id selector is with # 
