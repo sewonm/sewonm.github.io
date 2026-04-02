@@ -197,7 +197,7 @@ details p {
 
 
 .project-category {
-  font-size: 0.85em;
+  font-size: large;
 
   color: gray;
 
@@ -223,9 +223,4 @@ details p {
 
 
 
-
-
-/* id selector is with # 
-   class selector is with . 
-*/
 
